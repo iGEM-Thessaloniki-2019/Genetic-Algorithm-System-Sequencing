@@ -62,9 +62,9 @@ Once all above are ready, the users can run the software by opening the terminal
 ```
 $ bash Process.sh
 ```
-From here the user should specify NUPACK 3.0.6 path, number of generations and number of mutations in each generation, by following the instructions.
+From here the user should specify the NUPACK 3.0.6 path, the number of generations and the number of mutations in each generation, by following the instructions.
 
-The user can specify a domain to be mutated by adding the flag --specific_mut with the domain in the line 87 of the Process.sh file, for example ```$ python Genetic_Algorithm/SpecMutate.py -f $j --specific_mut solo-b ```
+The user can specify a particular domain to be mutated by adding the flag --specific_mut with the domain in the line 87 of the Process.sh file, for example ```$ python Genetic_Algorithm/SpecMutate.py -f $j --specific_mut solo-b ```
 
 In usual runs, the BN% measures are not calculated due to their excessive computational time. If the users want to calculate the BN% measures the have to put the --ted or -t flag in the lines 91 and 81, of the Process.sh. Specifically, the line should be
 ```$ python Genetic_Algorithm/EvaluationInputs.py --sys System/systemsys -bn Best_Species/current -t -sig signal1 signal2 signalN```
