@@ -78,7 +78,7 @@ In usual runs, the BN% measures are not calculated due to their excessive comput
 The toehold energies can be calculated by using the script Toeholds_Energies/toeholds.py. The users have t open toeholds.py, and change the array b. In this array the users have to import the toehold sequences. The binding energy of each toehold, the mean value of the energies, the energy variance, the energy range and a heatmap are printed in the terminal by running the following command:
 
 ```
-python toeholds.py
+$ python toeholds.py
 ```
 
 ## Contact ##
