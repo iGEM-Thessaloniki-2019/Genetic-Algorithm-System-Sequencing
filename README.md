@@ -1,6 +1,6 @@
 # Genetic-Algorithm-System-Sequencing #
 
-The scripts here are used to mutate one nucleotide in a existing DNA Strand Displacement system, to revaluate it and to choose to keep the mutation or discard it.
+The scripts here are used to mutate one nucleotide in a existing DNA Strand Displacement system, to revaluate the system and to choose to keep the mutated system or discard it.
 
 In order to use the software, the user has to put some input files and make some small changes to the code.
 
