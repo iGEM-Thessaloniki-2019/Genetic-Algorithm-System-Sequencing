@@ -5,10 +5,12 @@ The scripts here are used to mutate one nucleotide in a existing DNA Strand Disp
 In order to use the software, the user has to put some input files and make some small changes to the code.
 
 ## Dependencies ##
-python 2.7 and python 3
-the python packages pandas, os, numpy, re, argparse, pkg_resources, statistics, sys, csv, shutil, math, random, datetime
+python 2.7 and python 3 and the python packages pandas, os, numpy, re, argparse, pkg_resources, statistics, sys, csv, shutil, math, random, datetime
+
 NUPACK 3.0.6 http://nupack.org/downloads
+
 piperine https://github.com/DNA-and-Natural-Algorithms-Group/piperine
+
 stickydesign https://github.com/DNA-and-Natural-Algorithms-Group/stickydesign
 
 ## Creating the system files ##
