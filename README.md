@@ -73,5 +73,12 @@ The user can specify a particular domain to be mutated by adding the flag --spec
 In usual runs, the BN% measures are not calculated due to their excessive computational time. If the users want to calculate the BN% measures the have to put the --ted or -t flag in the lines 91 and 81, of the Process.sh. Specifically, the line should be
 ```$ python Genetic_Algorithm/EvaluationInputs.py --sys System/systemsys -bn Best_Species/current -t -sig signal1 signal2 signalN```
 
+## Calculating the toehold energies ##
+
+The toehold eneries can be calculated by using the script Toeholds_Energies/toeholds.py. The users have t open toeholds.py, and change the array b. In this array the users have to import the toehold sequences. The binding energy of each toehold, the mean value of the energies, the enery variance, the enery range and a heatmap are printed in the terminal by running the following command:
+```
+python toeholds.py
+```
+
 ## Contact ##
 For questions or troubleshooting, the users can send emails to igemthessaloniki@gmail.com
