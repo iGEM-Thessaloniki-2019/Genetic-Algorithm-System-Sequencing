@@ -72,3 +72,6 @@ The user can specify a particular domain to be mutated by adding the flag --spec
 
 In usual runs, the BN% measures are not calculated due to their excessive computational time. If the users want to calculate the BN% measures the have to put the --ted or -t flag in the lines 91 and 81, of the Process.sh. Specifically, the line should be
 ```$ python Genetic_Algorithm/EvaluationInputs.py --sys System/systemsys -bn Best_Species/current -t -sig signal1 signal2 signalN```
+
+## Contact ##
+For questions or troubleshooting, the users can send emails to igemthessaloniki@gmail.com
