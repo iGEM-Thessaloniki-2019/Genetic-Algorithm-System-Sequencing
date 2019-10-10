@@ -13,6 +13,10 @@ piperine https://github.com/DNA-and-Natural-Algorithms-Group/piperine
 
 stickydesign https://github.com/DNA-and-Natural-Algorithms-Group/stickydesign
 
+trash-cli by using the command ```$ sudo apt-get install trash-cli ```
+
+notify-osd by using the command ```$ sudo apt-get install notify-osd```
+
 ## Creating the system files ##
 
 First of all the users have to know the system they want to create the sequences for. This system should be described by a .comp file like those in Genetic_Algorithm/Examples/P65_example/System and Genetic_Algorithm/Examples/ELK1_example/System. Note that if the user does not intend to put restrictions for specific nucleotides, the .comp nucleotide restriction has to be H. Otherwise the .comp nucleotide restriction has to be in accordance with the user's restriction alphabet.  
