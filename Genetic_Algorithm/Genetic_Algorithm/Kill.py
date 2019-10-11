@@ -46,7 +46,7 @@ def metarank(scores, method = 'sum-of-metaranks'):
             continue
 
         rawscores.append([float(x) for x in col[1:]])  # don't invert raw scores
-        if 'SSU' in col[0] or 'SSTU' in col[0]:        # for these scores, higher is better
+        if 'SSU' in col[0] or 'SSTU' in col[0] or 'TF' in col[0]:        # for these scores, higher is better
             col = [-float(x) for x in col[1:]]
         else:
             col = [float(x) for x in col[1:]]          # for these scores, lower is better
