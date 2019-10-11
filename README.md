@@ -64,7 +64,7 @@ Once all above are ready, the users can run the software by opening the terminal
 ```
 $ bash Process.sh
 ```
-From here the user should specify the NUPACK 3.0.6 path, the number of generations and the number of mutations in each generation, by following the instructions.
+From here the user should specify the NUPACK 3.0.6 path, the number of generations and the number of mutations in each generation, following the instructions.
 
 The user can specify a particular domain to be mutated by adding the flag --specific_mut with the domain in the line 87 of the Process.sh file, for example ```$ python Genetic_Algorithm/SpecMutate.py -f $j --specific_mut solo-b ```
 
@@ -73,7 +73,7 @@ In usual runs, the BN% measures are not calculated due to their excessive comput
 
 ## Calculating the toehold energies ##
 
-The toehold energies can be calculated by using the script Toeholds_Energies/toeholds.py. The users have t open toeholds.py, and change the array b. In this array the users have to import the toehold sequences. The binding energy of each toehold, the mean value of the energies, the energy variance, the energy range and a heatmap are printed in the terminal by running the following command:
+The toehold energies can be calculated by using the script Toeholds_Energies/toeholds.py. The users have to open toeholds.py, and change the array b. In this array the users have to import the toehold sequences. The binding energy of each toehold, the mean value of the energies, the energy variance, the energy range and a heatmap are printed in the terminal by running the following command:
 
 ```
 $ python toeholds.py
