@@ -58,8 +58,6 @@ In the Process.sh the users have to change the lines specifying the NUPACK 3.0.6
 
 Another important change in done in the flag --sig of the EvalutionInputs.py. This flag must followed by the names of the system's signal strands. The lines 91 and 81 must look like this ```$ python Genetic_Algorithm/EvaluationInputs.py --sys System/systemsys -bn Best_Species/current -sig solo-Dtg solo-Btd solo-Ntb solo-tbB solo-taA solo-Btr solo-Rtq solo-Ctb solo-Itc solo-tcC```
 
-## Changing the code for a different transcription factor ##
-
 ## Using the software ##
 
 Once all above are ready, the users can run the software by opening the terminal in Genetic_Algorithm/ and typing the following command:
