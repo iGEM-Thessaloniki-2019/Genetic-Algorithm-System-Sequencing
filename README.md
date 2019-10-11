@@ -19,9 +19,9 @@ notify-osd by using the command ```$ sudo apt-get install notify-osd```
 
 ## Creating the system files ##
 
-First of all the users have to know the system they want to create the sequences for. This system should be described by a .comp file like those in Genetic_Algorithm/Examples/P65_example/System and Genetic_Algorithm/Examples/ELK1_example/System. Note that if the user does not intend to put restrictions for specific nucleotides, the .comp nucleotide restriction has to be H. Otherwise the .comp nucleotide restriction has to be in accordance with the user's restriction alphabet.  
+First of all the users have to know the system they want to create the sequences for. This system should be described by a .comp file like those in "Genetic_Algorithm/Examples/P65_example/System" and "Genetic_Algorithm/Examples/ELK1_example/System". Note that if the user does not intend to put restrictions for specific nucleotides, the .comp nucleotide restriction has to be H for the upper strands, which indicates that only A,T,C nuclotides are allowed (ex. sequence tb = "<t>H"). Otherwise the .comp nucleotide restriction has to be in accordance with the user's restriction alphabet.  
 
-The system will be initially imported in peppercompiler, so a .sys file is also needed. Examples of .sys files can be found in Genetic_Algorithm/Examples/P65_example/System and Genetic_Algorithm/Examples/ELK1_example/System. The .comp and the .sys have to be in the file Genetic_Algorithm/System and the .sys file has to be named systemsys.sys. The .comp file has to have a different name.
+The system will be initially imported in peppercompiler, so a .sys file is also needed. Examples of .sys files can be found in "Genetic_Algorithm/Examples/P65_example/System" and "Genetic_Algorithm/Examples/ELK1_example/System". The .comp and the .sys files have to be in the file Genetic_Algorithm/System and the .sys file has to be named systemsys.sys. The .comp file has to have a different name.
 
 Once those files are ready the users are ready to create the system.pil file which will contain the user's restrictions on the nucleotides. This is done with the following command in the terminal:
 ```
@@ -29,7 +29,7 @@ $ pepper-compiler systemsys.sys
 ```
 The users can open the system.pil and put nucleotides in the wanted positions. Those nucleotides will never be mutated through the Genetic Algorithm runs. A file named system.save will be also produced by the above command.
 
-About the TF files ....
+About the TF files, twwo files are needed. 
 
 Those .... files, systemsys.sys, .comp, system.pil, system.save .... must be in the System directory.
 
