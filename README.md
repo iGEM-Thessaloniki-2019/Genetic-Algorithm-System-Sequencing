@@ -52,7 +52,7 @@ The file needed for the initial sequences is the system.pil. This file must be r
 
 If no initial sequences are given, the software creates a .pil with random sequences, respecting the user specified restrictions.
 
-## Running to a different computer or different dna system ##
+## Running on a different computer or different dna system ##
 
 In the Process.sh the users have to change the lines specifying the NUPACK 3.0.6 directory. Those lines are 21, 23 and 29. More specifically the users have to change the "/home/lamphs/Desktop/iGem/dry_lab/packages/nupack3.0.6/nupack3.0.6" with the path to their computer's installation of NUPACK 3.0.6
 
