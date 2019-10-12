@@ -1,0 +1,5 @@
+declare system Solov:  -> 
+
+import plato_2_0
+
+component solo = plato_2_0(6,21): DTG -> C + TBB

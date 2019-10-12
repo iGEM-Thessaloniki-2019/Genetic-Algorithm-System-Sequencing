@@ -1,0 +1,97 @@
+## Specification for systemsys compiled at: Mon Sep  2 22:25:47 2019
+#
+## Top System
+#
+## Component solo
+sequence solo-ta = CTGTTT : 6
+sequence solo-tb = TTCCAC : 6
+sequence solo-tr = TCCTAA : 6
+sequence solo-tc = TATCCA : 6
+sequence solo-tq = TTTCAG : 6
+sequence solo-td = AAACCT : 6
+sequence solo-tg = AAACAG : 6
+sequence solo-r = CATTGCTTTACCGAGTCTTAT : 21
+sequence solo-n = CTGAACTATCCTGAGTCTTCA : 21
+sequence solo-c = CTACACCATCCCGAGTCCATT : 21
+sequence solo-a = CATTGCCCTTTCTCTTTTTTC : 21
+sequence solo-b = CATTGCACCTTAGAGTCCCAA : 21
+sequence solo-i = CTGCTATCAAACGAGTCACAT : 21
+sequence solo-d = GGGAATTTCCTCACACCTCCATGAGTCTACA : 31
+sup-sequence solo-dtg = solo-d solo-tg : 37
+sup-sequence solo-tbb = solo-tb solo-b : 27
+strand solo-Btd = solo-b solo-td : 27
+strand solo-trR = solo-tr solo-r : 27
+strand solo-Ntb = solo-n solo-tb : 27
+strand solo-Itc = solo-i solo-tc : 27
+strand solo-Dtg = solo-d solo-tg : 37
+strand solo-Ctb = solo-c solo-tb : 27
+strand solo-taA = solo-ta solo-a : 27
+strand solo-N = solo-n : 21
+strand solo-tbB = solo-tb solo-b : 27
+strand solo-tdD = solo-td solo-d : 37
+strand solo-Atb = solo-a solo-tb : 27
+strand solo-Btr = solo-b solo-tr : 27
+strand solo-Rtq = solo-r solo-tq : 27
+strand solo-tcC = solo-tc solo-c : 27
+strand solo-I = solo-i : 21
+strand solo-C = solo-c : 21
+strand solo-comp_tgDtdBtbN = solo-tg* solo-d* solo-td* solo-b* solo-tb* solo-n* : 91
+strand solo-comp_tqRtrBtbCtcI = solo-tq* solo-r* solo-tr* solo-b* solo-tb* solo-c* solo-tc* solo-i* : 108
+strand solo-comp_tqRtrBtbAta = solo-tq* solo-r* solo-tr* solo-b* solo-tb* solo-a* solo-ta* : 87
+strand solo-comp_Ctc = solo-c* solo-tc* : 27
+structure [1nt] solo-Btd1 = solo-Btd : ...........................
+structure [1nt] solo-trR1 = solo-trR : ...........................
+structure [1nt] solo-Ntb1 = solo-Ntb : ...........................
+structure [1nt] solo-Itc1 = solo-Itc : ...........................
+structure [1nt] solo-Dtg1 = solo-Dtg : .....................................
+structure [1nt] solo-Ctb1 = solo-Ctb : ...........................
+structure [1nt] solo-taA1 = solo-taA : ...........................
+structure [1nt] solo-N1 = solo-N : .....................
+structure [1nt] solo-tbB1 = solo-tbB : ...........................
+structure [1nt] solo-tdD1 = solo-tdD : .....................................
+structure [1nt] solo-Atb1 = solo-Atb : ...........................
+structure [1nt] solo-Btr1 = solo-Btr : ...........................
+structure [1nt] solo-Rtq1 = solo-Rtq : ...........................
+structure [1nt] solo-tcC1 = solo-tcC : ...........................
+structure [1nt] solo-I1 = solo-I : .....................
+structure [1nt] solo-C1 = solo-C : .....................
+structure [1nt] solo-N_tbB_tdD_tgDtdBtbN = solo-N + solo-tbB + solo-tdD + solo-comp_tgDtdBtbN : (((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((((((((((((+......)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+structure [1nt] solo-Atb_Btr_Rtq_tqRtrBtbAta = solo-Atb + solo-Btr + solo-Rtq + solo-comp_tqRtrBtbAta : (((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))......
+structure [1nt] solo-I_tcC_tbB_trR_tqRtrBtbCtcI = solo-I + solo-tcC + solo-tbB + solo-trR + solo-comp_tqRtrBtbCtcI : (((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+......))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+structure [1nt] solo-C_Ctc = solo-C + solo-comp_Ctc : (((((((((((((((((((((+)))))))))))))))))))))......
+structure [1nt] solo-N_tbB_Dtg_tgDtdBtbN = solo-N + solo-tbB + solo-Dtg + solo-comp_tgDtdBtbN : (((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((((((((((((+)))))))))))))))))))))))))))))))))))))......))))))))))))))))))))))))))))))))))))))))))))))))
+structure [1nt] solo-N_Btd_Dtg_tgDtdBtbN = solo-N + solo-Btd + solo-Dtg + solo-comp_tgDtdBtbN : (((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((((((((((((+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))......)))))))))))))))))))))
+structure [1nt] solo-taA_Btr_Rtq_tqRtrBtbAta = solo-taA + solo-Btr + solo-Rtq + solo-comp_tqRtrBtbAta : (((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+))))))))))))))))))))))))))))))))))))))))))))))))))))))......)))))))))))))))))))))))))))
+structure [1nt] solo-taA_tbB_Rtq_tqRtrBtbAta = solo-taA + solo-tbB + solo-Rtq + solo-comp_tqRtrBtbAta : (((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+)))))))))))))))))))))))))))......))))))))))))))))))))))))))))))))))))))))))))))))))))))
+structure [1nt] solo-I_tcC_tbB_Rtq_tqRtrBtbCtcI = solo-I + solo-tcC + solo-tbB + solo-Rtq + solo-comp_tqRtrBtbCtcI : (((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+)))))))))))))))))))))))))))......)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+structure [1nt] solo-I_tcC_Btr_Rtq_tqRtrBtbCtcI = solo-I + solo-tcC + solo-Btr + solo-Rtq + solo-comp_tqRtrBtbCtcI : (((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+))))))))))))))))))))))))))))))))))))))))))))))))))))))......))))))))))))))))))))))))))))))))))))))))))))))))
+structure [1nt] solo-I_Ctb_Btr_Rtq_tqRtrBtbCtcI = solo-I + solo-Ctb + solo-Btr + solo-Rtq + solo-comp_tqRtrBtbCtcI : (((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))......)))))))))))))))))))))
+structure [1nt] solo-Itc_Ctb_Btr_Rtq_tqRtrBtbCtcI = solo-Itc + solo-Ctb + solo-Btr + solo-Rtq + solo-comp_tqRtrBtbCtcI : (((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+structure [1nt] solo-Ntb_Btd_Dtg_tgDtdBtbN = solo-Ntb + solo-Btd + solo-Dtg + solo-comp_tgDtdBtbN : (((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((((((((((((+)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+structure [1nt] solo-taA_tbB_trR_tqRtrBtbAta = solo-taA + solo-tbB + solo-trR + solo-comp_tqRtrBtbAta : (((((((((((((((((((((((((((+(((((((((((((((((((((((((((+(((((((((((((((((((((((((((+......)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+structure [1nt] solo-tcC_Ctc = solo-tcC + solo-comp_Ctc : (((((((((((((((((((((((((((+)))))))))))))))))))))))))))
+kinetic [0.000000 /M/s < k < inf /M/s] solo-Dtg1 + solo-N_tbB_tdD_tgDtdBtbN -> solo-N_tbB_Dtg_tgDtdBtbN + solo-tdD1
+kinetic [0.000000 /M/s < k < inf /M/s] solo-Btd1 + solo-N_tbB_Dtg_tgDtdBtbN -> solo-N_Btd_Dtg_tgDtdBtbN + solo-tbB1
+kinetic [0.000000 /M/s < k < inf /M/s] solo-Ntb1 + solo-N_Btd_Dtg_tgDtdBtbN -> solo-Ntb_Btd_Dtg_tgDtdBtbN + solo-N1
+kinetic [0.000000 /M/s < k < inf /M/s] solo-taA1 + solo-N_tbB_tdD_tgDtdBtbN -> solo-Atb1 + solo-taA_Btr_Rtq_tqRtrBtbAta
+kinetic [0.000000 /M/s < k < inf /M/s] solo-tbB1 + solo-taA_Btr_Rtq_tqRtrBtbAta -> solo-Btr1 + solo-taA_tbB_Rtq_tqRtrBtbAta
+kinetic [0.000000 /M/s < k < inf /M/s] solo-trR1 + solo-taA_tbB_Rtq_tqRtrBtbAta -> solo-Rtq1 + solo-taA_tbB_trR_tqRtrBtbAta
+kinetic [0.000000 /M/s < k < inf /M/s] solo-Rtq1 + solo-I_tcC_tbB_trR_tqRtrBtbCtcI -> solo-trR1 + solo-I_tcC_tbB_Rtq_tqRtrBtbCtcI
+kinetic [0.000000 /M/s < k < inf /M/s] solo-Btr1 + solo-I_tcC_tbB_Rtq_tqRtrBtbCtcI -> solo-tbB1 + solo-I_tcC_Btr_Rtq_tqRtrBtbCtcI
+kinetic [0.000000 /M/s < k < inf /M/s] solo-Btr1 + solo-I_tcC_Btr_Rtq_tqRtrBtbCtcI -> solo-tcC1 + solo-I_Ctb_Btr_Rtq_tqRtrBtbCtcI
+kinetic [0.000000 /M/s < k < inf /M/s] solo-Itc1 + solo-I_Ctb_Btr_Rtq_tqRtrBtbCtcI -> solo-I1 + solo-Itc_Ctb_Btr_Rtq_tqRtrBtbCtcI
+kinetic [0.000000 /M/s < k < inf /M/s] solo-tcC1 + solo-C_Ctc -> solo-tcC_Ctc + solo-C1
+#
+## Top System Connectors
+#
+## Signal DTG
+sequence DTG = NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN : 37
+equal DTG solo-dtg 
+#
+## Signal C
+sequence C = NNNNNNNNNNNNNNNNNNNNN : 21
+equal C solo-c 
+#
+## Signal TBB
+sequence TBB = NNNNNNNNNNNNNNNNNNNNNNNNNNN : 27
+equal TBB solo-tbb 

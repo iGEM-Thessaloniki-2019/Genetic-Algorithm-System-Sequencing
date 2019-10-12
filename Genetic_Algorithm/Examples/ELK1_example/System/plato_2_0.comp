@@ -1,0 +1,104 @@
+declare component Plato_2_0(t, bm): dtg -> c + tbb   
+
+## Create toeholds 7
+sequence ta = "<t>N"
+sequence tb = "<t>H"
+sequence tr = "<t>H"
+sequence tc = "<t>H"
+sequence tq = "<t>N"
+sequence td = "<t>H"
+sequence tg = "<t>N"
+
+## Create domains 7
+sequence r = "<bm>N"
+sequence n = "<bm>N"
+sequence c = "<bm>N"
+sequence a = "<bm>N"
+sequence b = "<bm>N"
+sequence i = "<bm>N"
+sequence d = "<bm+10>N"
+
+## Signals
+sequence dtg = d tg
+sequence tbb = tb b
+
+## Enzyme domains 
+
+## Create initial strands 24
+strand Btd = b td
+strand trR = tr r
+strand Ntb = n tb
+strand Itc = i tc
+strand Dtg = d tg
+strand Ctb = c tb
+strand taA = ta a
+strand N = n
+strand tbB = tb b
+strand tdD = td d
+strand Atb = a tb
+strand Btr = b tr
+strand Rtq = r tq
+strand tcC = tc c
+strand I = i
+strand C = c
+strand comp_tgDtdBtbN = tg* d* td* b* tb* n*
+strand comp_tqRtrBtbCtcI = tq* r* tr* b* tb* c* tc* i*
+strand comp_tqRtrBtbAta = tq* r* tr* b* tb* a* ta*
+strand comp_Ctc = c* tc*
+
+
+## Create initial complexes
+structure Btd1 = Btd : domain ..
+structure trR1 = trR : domain ..
+structure Ntb1 = Ntb : domain ..
+structure Itc1 = Itc : domain ..
+structure Dtg1 = Dtg : domain ..
+structure Ctb1 = Ctb : domain ..
+structure taA1 = taA : domain ..
+structure N1 = N : domain .
+structure tbB1 = tbB : domain ..
+structure tdD1 = tdD : domain ..
+structure Atb1 = Atb : domain ..
+structure Btr1 = Btr : domain ..
+structure Rtq1 = Rtq : domain ..
+structure tcC1 = tcC : domain ..
+structure I1 = I : domain .
+structure C1 = C : domain .
+
+structure N_tbB_tdD_tgDtdBtbN = N + tbB + tdD + comp_tgDtdBtbN : domain (+((+((+.)))))
+structure Atb_Btr_Rtq_tqRtrBtbAta = Atb+Btr+Rtq+comp_tqRtrBtbAta : domain ((+((+((+)))))).
+structure I_tcC_tbB_trR_tqRtrBtbCtcI = I+tcC+tbB+trR+comp_tqRtrBtbCtcI : domain (+((+((+((+.)))))))
+structure C_Ctc = C + comp_Ctc : domain (+).
+
+## Create initermediate complexes
+structure N_tbB_Dtg_tgDtdBtbN = N + tbB + Dtg + comp_tgDtdBtbN : domain (+((+((+)).)))
+structure N_Btd_Dtg_tgDtdBtbN = N + Btd + Dtg + comp_tgDtdBtbN : domain (+((+((+)))).)
+
+structure taA_Btr_Rtq_tqRtrBtbAta = taA+Btr+Rtq+comp_tqRtrBtbAta : domain ((+((+((+)))).))
+structure taA_tbB_Rtq_tqRtrBtbAta = taA+tbB+Rtq+comp_tqRtrBtbAta : domain ((+((+((+)).))))
+
+structure I_tcC_tbB_Rtq_tqRtrBtbCtcI = I+tcC+tbB+Rtq+comp_tqRtrBtbCtcI : domain (+((+((+((+)).)))))
+structure I_tcC_Btr_Rtq_tqRtrBtbCtcI = I+tcC+Btr+Rtq+comp_tqRtrBtbCtcI : domain (+((+((+((+)))).)))
+structure I_Ctb_Btr_Rtq_tqRtrBtbCtcI = I+Ctb+Btr+Rtq+comp_tqRtrBtbCtcI : domain (+((+((+((+)))))).)
+
+## Create final comlexes
+structure Itc_Ctb_Btr_Rtq_tqRtrBtbCtcI = Itc + Ctb + Btr + Rtq + comp_tqRtrBtbCtcI : domain ((+((+((+((+))))))))
+structure Ntb_Btd_Dtg_tgDtdBtbN = Ntb + Btd + Dtg + comp_tgDtdBtbN : domain ((+((+((+))))))
+structure taA_tbB_trR_tqRtrBtbAta = taA+tbB+trR+comp_tqRtrBtbAta : domain ((+((+((+.))))))
+structure tcC_Ctc = tcC + comp_Ctc : domain ((+)) 
+
+## Kinetics
+kinetic Dtg1 + N_tbB_tdD_tgDtdBtbN -> N_tbB_Dtg_tgDtdBtbN + tdD1
+kinetic Btd1 + N_tbB_Dtg_tgDtdBtbN -> N_Btd_Dtg_tgDtdBtbN + tbB1
+kinetic Ntb1 +N_Btd_Dtg_tgDtdBtbN -> Ntb_Btd_Dtg_tgDtdBtbN + N1
+
+kinetic taA1 + N_tbB_tdD_tgDtdBtbN  -> Atb1 + taA_Btr_Rtq_tqRtrBtbAta
+kinetic tbB1 + taA_Btr_Rtq_tqRtrBtbAta -> Btr1 + taA_tbB_Rtq_tqRtrBtbAta
+kinetic trR1 + taA_tbB_Rtq_tqRtrBtbAta -> Rtq1 + taA_tbB_trR_tqRtrBtbAta
+
+kinetic Rtq1 + I_tcC_tbB_trR_tqRtrBtbCtcI -> trR1 + I_tcC_tbB_Rtq_tqRtrBtbCtcI
+kinetic Btr1 + I_tcC_tbB_Rtq_tqRtrBtbCtcI -> tbB1 + I_tcC_Btr_Rtq_tqRtrBtbCtcI
+kinetic Btr1 + I_tcC_Btr_Rtq_tqRtrBtbCtcI -> tcC1 + I_Ctb_Btr_Rtq_tqRtrBtbCtcI
+kinetic Itc1 + I_Ctb_Btr_Rtq_tqRtrBtbCtcI -> I1 + Itc_Ctb_Btr_Rtq_tqRtrBtbCtcI
+
+kinetic tcC1 + C_Ctc -> tcC_Ctc + C1
